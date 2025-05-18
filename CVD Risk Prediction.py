@@ -3,8 +3,8 @@ import pandas as pd
 import streamlit as st
 
 # Load model and pipeline
-model = joblib.load(r'C:/Users/Harbiodun/Downloads/Assignment/Success project/MLP-CVD.pkl')
-preprocessing_pipeline = joblib.load(r'C:/Users/Harbiodun/Downloads/Assignment/Success project/pipeline.pkl')
+model = joblib.load('MLP-CVD.pkl')
+preprocessing_pipeline = joblib.load('pipeline.pkl')
 
 # columns order
 columns = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalch', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 # Sidebar: image + text only
-st.sidebar.image("C:/Users/Harbiodun/Downloads/Assignment/Success project/pic.png", use_column_width=True)
+st.sidebar.image("pic.png", use_column_width=True)
 st.sidebar.markdown("""
 ### 💡 Stay Heart Smart
 
